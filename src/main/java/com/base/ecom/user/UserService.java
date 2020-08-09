@@ -22,6 +22,10 @@ public class UserService {
         return userDtoList;
     }
 
+    public void deleteById(Long id) {
+    	userRepository.deleteById(id);
+    }
+
     User toEntity(UserDto userDto) {
     	User user = null;
     	if (null != userDto) {
